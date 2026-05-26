@@ -1,32 +1,39 @@
 import pdfplumber
 
-pdf_path = "data/resume.pdf"
+def extract_text_fromPdf(pdf_path):
+    text=""
 
-text = ""
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            page_text=page.extract_text()
 
-with pdfplumber.open(pdf_path) as pdf:
-    for page in pdf.pages:
-        page_text = page.extract_text()
+            if page_text:
+                text+=page_text
 
-        if page_text:
-            text += page_text
+    return text
 
-skills = [
+def extract_skills(text,skills):
+    found_skills=[]
+    for skill in skills:
+        if skill.lower() in text.lower():
+            found_skills.append(skill)
+    
+    return found_skills
+
+skills=[
     "Python",
     "Java",
+    "SQL",
     "React",
     "FastAPI",
-    "SQL",
     "Docker",
-    "Machine Learning",
-    "TensorFlow"
+    "MachineLearning"
 ]
 
-found_skills = []
+pdf_path="data/resume.pdf"
 
-for skill in skills:
-    if skill.lower() in text.lower():
-        found_skills.append(skill)
+resume_text=extract_text_fromPdf(pdf_path)
+found_skills=extract_skills(resume_text,skills)
 
 print("Found Skills:")
 print(found_skills)
