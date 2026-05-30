@@ -75,7 +75,7 @@ ai-resume-matcher/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/ai-resume-matcher.git
+git clone https://github.com/NeelimaGurram/ai-resume-analyzer.git
 cd ai-resume-matcher
 ```
 
