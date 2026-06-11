@@ -1,0 +1,15 @@
+{
+  "file": "data/resume.pdf",
+  "full_text": "John Doe\njohn.doe@email.com | +1 (555) 123-4567 | linkedin.com/in/johndoe\nEDUCATION\nB.S. Computer Science \u2014 Ohio State University (2020\u20132024)\nSKILLS\nPython, JavaScript, React, Node.js, SQL, Git, Docker, Machine Learning, CI/CD\nEXPERIENCE\nSoftware Engineer Intern \u2014 TechCorp (Jun 2023 \u2013 Aug 2023)\n(cid:127) Built REST APIs using Python and FastAPI, reducing response time by 30%\n(cid:127) Wrote unit tests with Pytest achieving 85% code coverage\nPROJECTS\nAI Resume Matcher\n(cid:127) Built an AI-powered resume analyzer using FastAPI, React, spaCy, and OpenAI API\n(cid:127) Implemented FAISS vector search for semantic job matching",
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "John Doe\njohn.doe@email.com | +1 (555) 123-4567 | linkedin.com/in/johndoe\nEDUCATION\nB.S. Computer Science \u2014 Ohio State University (2020\u20132024)\nSKILLS\nPython, JavaScript, React, Node.js, SQL, Git, Docker, Machine Learning, CI/CD\nEXPERIENCE\nSoftware Engineer Intern \u2014 TechCorp (Jun 2023 \u2013 Aug 2023)\n(cid:127) Built REST APIs using Python and FastAPI, reducing response time by 30%\n(cid:127) Wrote unit tests with Pytest achieving 85% code coverage\nPROJECTS\nAI Resume Matcher\n(cid:127) Built an AI-powered resume analyzer using FastAPI, React, spaCy, and OpenAI API\n(cid:127) Implemented FAISS vector search for semantic job matching"
+    }
+  ],
+  "contact_info": {
+    "email": "john.doe@email.com",
+    "phone": "+1 (555) 123-4567",
+    "linkedin": "linkedin.com/in/johndoe"
+  }
+}
