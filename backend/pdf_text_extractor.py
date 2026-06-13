@@ -19,10 +19,15 @@ def extract_text_with_pdfplumber(pdf_path: str)-> dict:
                 "text": page_text
             })
 
-            result["full_text"]+=page_text+"\n"
+            if page_text:
+                result["full_text"]+=page_text+"\n"
         result["full_text"]=result["full_text"].strip()
     
     return result
+
+def extract_name(text:str)->Optional[str]:
+    lines=[line.strip() for line in text.split("\n") if line.strip()]
+    return lines[0] if lines else None
 
 def extract_email(text: str)->Optional[str]:
     pattern=r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
@@ -48,6 +53,7 @@ def extract_linkedin(text:str)->Optional[str]:
 
 def extract_contact_info(text:str)->dict:
     return {
+        "name":extract_name(text),
         "email":extract_email(text),
         "phone":extract_phone(text),
         "linkedin":extract_linkedin(text)
